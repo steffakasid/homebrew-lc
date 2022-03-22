@@ -5,21 +5,21 @@
 class Lc < Formula
   desc "This tool can be used collect from AWS cloudwatch log groups"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "0.2"
+  version "0.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/lc/releases/download/0.2/lc_0.2_Darwin_x86_64.tar.gz"
-      sha256 "dd11b63c742244d9daccff2c551e4a5c8efed361bec99a6bfeddef77e2846b7b"
+      url "https://github.com/steffakasid/lc/releases/download/0.3/lc_0.3_Darwin_x86_64.tar.gz"
+      sha256 "9f3611f5bce96fe14a4017a30948a61ecde018ca6b48b456cec8e291c8cfdec0"
 
       def install
         bin.install "lc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/lc/releases/download/0.2/lc_0.2_Darwin_arm64.tar.gz"
-      sha256 "874f1dce481fec0bd461b9cec28acf4e91020f5b5085b23a31722b22f414b19b"
+      url "https://github.com/steffakasid/lc/releases/download/0.3/lc_0.3_Darwin_arm64.tar.gz"
+      sha256 "79c4fe4b61073487a3f442e3a4ac82cbc98f993ea0fcdcbb43dae91ad52e1aaf"
 
       def install
         bin.install "lc"
@@ -29,16 +29,16 @@ class Lc < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/lc/releases/download/0.2/lc_0.2_Linux_x86_64.tar.gz"
-      sha256 "ecb6613dbd6ddb758595a9fc808771bf4197aecb2828dd9d50e81c6db1137ebe"
+      url "https://github.com/steffakasid/lc/releases/download/0.3/lc_0.3_Linux_x86_64.tar.gz"
+      sha256 "87f2037aab606f3f68904eb8f4aa9176010da62e8b0fb6971b5edb996a24c10e"
 
       def install
         bin.install "lc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/lc/releases/download/0.2/lc_0.2_Linux_arm64.tar.gz"
-      sha256 "d91a8a34228804a91e5c1183d3f5b54259505c6804003e2b6fad700391a36f12"
+      url "https://github.com/steffakasid/lc/releases/download/0.3/lc_0.3_Linux_arm64.tar.gz"
+      sha256 "a74629572aa073f5281c8d44b7b82d9804bdabaebfbb84ce9d25b7664968e5a9"
 
       def install
         bin.install "lc"
