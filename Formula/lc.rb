@@ -5,21 +5,21 @@
 class Lc < Formula
   desc "This tool can be used collect from AWS cloudwatch log groups"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "0.4-rc"
+  version "0.4"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/lc/releases/download/0.4-rc/lc_0.4-rc_Darwin_x86_64.tar.gz"
-      sha256 "c15aa7370e307a4a6e641cc6a73ad95484d0a4587f2d7adc9545c820ce127981"
+    if Hardware::CPU.arm?
+      url "https://github.com/steffakasid/lc/releases/download/0.4/lc_0.4_Darwin_arm64.tar.gz"
+      sha256 "2f94b14924c11571fd22bd4bf07dd64fad4a69ac5f220761287890d19b8d9869"
 
       def install
         bin.install "lc"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/lc/releases/download/0.4-rc/lc_0.4-rc_Darwin_arm64.tar.gz"
-      sha256 "f8eed1c45bf8d3c44c07a0bd2d4f07bc9689cae156d82c350c1322ec3fbd0642"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/lc/releases/download/0.4/lc_0.4_Darwin_x86_64.tar.gz"
+      sha256 "266a482ecf5a5d69a80b8137e9bae34c7080143e0884b0a1911f24ce532e4c9f"
 
       def install
         bin.install "lc"
@@ -28,17 +28,17 @@ class Lc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/lc/releases/download/0.4-rc/lc_0.4-rc_Linux_arm64.tar.gz"
-      sha256 "ca0cdf1db18f9c8af367fc7f242e6e83c8da8886cf8cb056ec6402ee126c6fa6"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/lc/releases/download/0.4/lc_0.4_Linux_x86_64.tar.gz"
+      sha256 "6ce0ef775486be2835438c802bd04fc769db53f26666f1c9a40080c54d415626"
 
       def install
         bin.install "lc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/lc/releases/download/0.4-rc/lc_0.4-rc_Linux_x86_64.tar.gz"
-      sha256 "0418bbb16ec7743208aa481cdaadd6959eb1c3dd4a098fa9e016b349cd4e7b67"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/lc/releases/download/0.4/lc_0.4_Linux_arm64.tar.gz"
+      sha256 "065ac5065a9375c3bea8e61f9d00174ada34be77770cc1fbe020704e549fad16"
 
       def install
         bin.install "lc"
