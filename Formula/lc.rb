@@ -5,21 +5,21 @@
 class Lc < Formula
   desc "This tool can be used collect from AWS cloudwatch log groups"
   homepage "https://github.com/steffakasid/lc"
-  version "0.7"
+  version "0.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/lc/releases/download/0.7/lc_0.7_Darwin_arm64.tar.gz"
-      sha256 "8db3df47dbbfa91db0b5fda803ff72194b820915683fd998af709e09ba709316"
+      url "https://github.com/steffakasid/lc/releases/download/0.8/lc_0.8_Darwin_arm64.tar.gz"
+      sha256 "0ee0f0d342cb796101533fd86ab8cad14f4674a0c122a58ccfd7fc1b68270277"
 
       def install
         bin.install "lc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/lc/releases/download/0.7/lc_0.7_Darwin_x86_64.tar.gz"
-      sha256 "2d1e8069445c79f0e2dd204c72e31715e536c52e5957b2f3ce96d55fd554976a"
+      url "https://github.com/steffakasid/lc/releases/download/0.8/lc_0.8_Darwin_x86_64.tar.gz"
+      sha256 "07989eadae8731db57cc1259be5ae291abff631f9fe5c92ccb8f0f23eb7b1a01"
 
       def install
         bin.install "lc"
@@ -29,16 +29,16 @@ class Lc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/lc/releases/download/0.7/lc_0.7_Linux_arm64.tar.gz"
-      sha256 "104479208313ba46536be280d83149615c1c4947838ac5ca60e166b485d88569"
+      url "https://github.com/steffakasid/lc/releases/download/0.8/lc_0.8_Linux_arm64.tar.gz"
+      sha256 "012ac98096099938a33356feb330245804636379c7481a8dc96836cc2e6269a6"
 
       def install
         bin.install "lc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/lc/releases/download/0.7/lc_0.7_Linux_x86_64.tar.gz"
-      sha256 "efd105ce0abc79caa4ca627493f3b6173c526579e1758660598ef66e0d5cfaeb"
+      url "https://github.com/steffakasid/lc/releases/download/0.8/lc_0.8_Linux_x86_64.tar.gz"
+      sha256 "9e936d5ec6e732240893bc39a7fa6ce0e417ac1b46fadf9c49d2532899a5d88e"
 
       def install
         bin.install "lc"
