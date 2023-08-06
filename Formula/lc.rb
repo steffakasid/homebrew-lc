@@ -5,21 +5,21 @@
 class Lc < Formula
   desc "This tool can be used collect from AWS cloudwatch log groups"
   homepage "https://github.com/steffakasid/lc"
-  version "0.14"
+  version "0.15"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/lc/releases/download/v0.14/lc_0.14_darwin_amd64.tar.gz"
-      sha256 "c479d87574ed7553f4d27bbce90e773c64a8fc8ac20753fe533eab04510c9396"
+    if Hardware::CPU.arm?
+      url "https://github.com/steffakasid/lc/releases/download/v0.15/lc_0.15_darwin_arm64.tar.gz"
+      sha256 "4fa23aed29c776a0ebbdc34169bb30b28e4570bf58d157af52f4550731ca8e57"
 
       def install
         bin.install "lc"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/lc/releases/download/v0.14/lc_0.14_darwin_arm64.tar.gz"
-      sha256 "6951805636ada1eeedb65a701fd891f87d5e45e8341708a215686d9daf9b05f2"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/lc/releases/download/v0.15/lc_0.15_darwin_amd64.tar.gz"
+      sha256 "05c3ae220db02fe00c807adbca47f5f82aa311dfacdac51413b8d2429bbcccad"
 
       def install
         bin.install "lc"
@@ -28,17 +28,17 @@ class Lc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/lc/releases/download/v0.14/lc_0.14_linux_arm64.tar.gz"
-      sha256 "df39bb5764e5ce1fb751779f19e52f2a85c27ff578de40104233105bce565a38"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/lc/releases/download/v0.15/lc_0.15_linux_amd64.tar.gz"
+      sha256 "a48b8093f917934bbeed5838696bcca53c34837a963893d67b1faf60d36237fd"
 
       def install
         bin.install "lc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/lc/releases/download/v0.14/lc_0.14_linux_amd64.tar.gz"
-      sha256 "a3aa3e8cd8e24d39e9f3ad60cc8c3db66c90e158bda70c28ad1bb1bc8309b743"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/lc/releases/download/v0.15/lc_0.15_linux_arm64.tar.gz"
+      sha256 "9154f7c89887a87233336d4e9a5151439587fc35ddc673e5d74df7efe7ba5805"
 
       def install
         bin.install "lc"
