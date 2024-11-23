@@ -5,21 +5,21 @@
 class Lc < Formula
   desc "This tool can be used collect from AWS cloudwatch log groups"
   homepage "https://github.com/steffakasid/lc"
-  version "0.20"
+  version "0.23"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/steffakasid/lc/releases/download/v0.20/lc_0.20_darwin_amd64.tar.gz"
-      sha256 "65efce176cf4d99506ea76ae7160115ce36e954bbcf4f7aee6e1252cde0c7bf7"
+      url "https://github.com/steffakasid/lc/releases/download/v0.23/lc_0.23_darwin_amd64.tar.gz"
+      sha256 "e9834778cb596f536722d5179e8689aaf4c3306cca0b8f817063e09dc1c39d44"
 
       def install
         bin.install "lc"
       end
     end
     on_arm do
-      url "https://github.com/steffakasid/lc/releases/download/v0.20/lc_0.20_darwin_arm64.tar.gz"
-      sha256 "20498608f4d96a6a3e1054e04067bda58d5400d8e71440a213d9a0a333412571"
+      url "https://github.com/steffakasid/lc/releases/download/v0.23/lc_0.23_darwin_arm64.tar.gz"
+      sha256 "d474826783d5d7c00b66562b11c9d016a34b89023a8fc90fd42de708787aa014"
 
       def install
         bin.install "lc"
@@ -30,8 +30,8 @@ class Lc < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/lc/releases/download/v0.20/lc_0.20_linux_amd64.tar.gz"
-        sha256 "7dc4c9f2c89b5cda049598e28feceec15c3ff4f00d713f3eae43c54d1320b503"
+        url "https://github.com/steffakasid/lc/releases/download/v0.23/lc_0.23_linux_amd64.tar.gz"
+        sha256 "84556fe3470fcde484297a966210e9ba96cd23d07a5e92cad3c3afe3a06b7fb6"
 
         def install
           bin.install "lc"
@@ -40,8 +40,8 @@ class Lc < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/lc/releases/download/v0.20/lc_0.20_linux_arm64.tar.gz"
-        sha256 "b82f503d766f5a73f1d75165a9844b6141ffbf84c8dc50fcb91a9ae1533bbb34"
+        url "https://github.com/steffakasid/lc/releases/download/v0.23/lc_0.23_linux_arm64.tar.gz"
+        sha256 "091da33094d8c85c52dbe28dbc407f559222a286813cde8ea4c20ea9a1824060"
 
         def install
           bin.install "lc"
