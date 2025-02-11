@@ -5,21 +5,21 @@
 class Lc < Formula
   desc "This tool can be used collect from AWS cloudwatch log groups"
   homepage "https://github.com/steffakasid/lc"
-  version "0.24"
+  version "0.25"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/lc/releases/download/v0.24/lc_0.24_darwin_amd64.tar.gz"
-      sha256 "31ce292a834cceb0ef33684409112456c0b77930a1714be4931102c59c78bce1"
+      url "https://github.com/steffakasid/lc/releases/download/v0.25/lc_0.25_darwin_amd64.tar.gz"
+      sha256 "07d1dc84a9ebe457ba80ee509f0fb9b4a1e393f9cf68f6f6c60dab534d8c8a60"
 
       def install
         bin.install "lc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/lc/releases/download/v0.24/lc_0.24_darwin_arm64.tar.gz"
-      sha256 "de25f41f745d6dffbb1fc21bb49e0b01d518e2826d1e9f12e696054c3a026ec4"
+      url "https://github.com/steffakasid/lc/releases/download/v0.25/lc_0.25_darwin_arm64.tar.gz"
+      sha256 "470fdee67677fddbbaed0e5a23939e2222e2a91f23e15c8dca958aa1b57aabf7"
 
       def install
         bin.install "lc"
@@ -30,8 +30,8 @@ class Lc < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/lc/releases/download/v0.24/lc_0.24_linux_amd64.tar.gz"
-        sha256 "8eb74fa26899143e78f7a45141bafa3c9741de942447a61ccdf2eedbb611b858"
+        url "https://github.com/steffakasid/lc/releases/download/v0.25/lc_0.25_linux_amd64.tar.gz"
+        sha256 "1dfbf89728759f00b790081509400f593b8d43887d363d6d5845a545656b67b2"
 
         def install
           bin.install "lc"
@@ -40,8 +40,8 @@ class Lc < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/lc/releases/download/v0.24/lc_0.24_linux_arm64.tar.gz"
-        sha256 "742b2db3bf949c0ebb967f1c1319713406b3e3857963076606373d4d90c8c991"
+        url "https://github.com/steffakasid/lc/releases/download/v0.25/lc_0.25_linux_arm64.tar.gz"
+        sha256 "849544032a0658a9ff3676893a500674e29ab791b9fd633c8fb0dd13b8cd892d"
 
         def install
           bin.install "lc"
